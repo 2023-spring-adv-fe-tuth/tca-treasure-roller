@@ -1,1 +1,29 @@
-<p>hoard-screen works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Item Name</th>
+            <th scope="col">Total Value</th>
+            <th scope="col">Sale Value</th>
+            <th scope="col">Remove Item</th>
+        </tr>
+    </thead>
+    <tbody  *ngFor="let item of showMe">
+        <tr>
+            <td><mark>{{item.itemName}}</mark></td>
+            <td>{{item.itemValue ? item.itemValue : "Sale item" }}</td>
+            <td>{{item.saleValue}}</td>
+            <td class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Sell Item 
+                </label>                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                {{item.notes}}
+            </td>
+        </tr>
+</table>
+<button class="btn"
+    (click)="updateHoard()"
+>Return to Home</button>
