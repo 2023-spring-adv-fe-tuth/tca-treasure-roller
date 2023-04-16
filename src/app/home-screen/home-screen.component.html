@@ -1,1 +1,55 @@
-<p>home-screen works!</p>
+<h2>Click the button to start building treasure.</h2>
+<button
+  class="btn btn-outline-success"
+  routerLink="/parameters-screen">
+  Roll New Treasure
+</button>
+<h4
+  *ngIf="leaderData.length == 0"
+>You currently have no hoards. Click the button to start your collection.</h4>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0"
+  *ngIf="leaderData.length > 0"
+>
+  <ngb-panel *ngFor="let player of leaderData">
+    <ng-template ngbPanelTitle>
+      {{ player.name }}
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <ul>
+        <li>{{ player.wins }}</li>
+        <li>{{ player.losses }}</li>
+        <li>{{ player.avg }}</li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" 
+  *ngIf="treasureHistory.length > 0"
+>
+  <ngb-panel *ngFor="let hoard of treasureHistory">
+    <ng-template ngbPanelTitle>
+      {{ hoard.name }} -- {{ hoard.timeStamp }}
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="hoard.budget">
+          Hoard Budget: {{ hoard.budget }}
+        </li>
+        <li class="list-group-item" *ngIf="hoard.encounterLevel">
+          Encounter Level: {{ hoard.encounterLevel }}</li>
+        <li class="list-group-item">
+          Total Hoard Value: {{ hoard.totalValue }}gp
+        </li>
+        <li class="list-group-item">
+          Hoard Sale Value: {{ hoard.totalSaleValue }}gp
+        </li>
+      </ul>
+      <button
+        class="btn"
+        routerLink="/hoard-screen" 
+      >Edit Hoard</button>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
