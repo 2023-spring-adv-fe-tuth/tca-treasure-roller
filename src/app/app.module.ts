@@ -7,6 +7,7 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { HoardScreenComponent } from './hoard-screen/hoard-screen.component';
 import { ParametersScreenComponent } from './parameters-screen/parameters-screen.component';
 import { ResultScreenComponent } from './result-screen/result-screen.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ResultScreenComponent } from './result-screen/result-screen.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
