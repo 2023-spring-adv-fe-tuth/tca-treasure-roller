@@ -1,5 +1,5 @@
 import { TreasureSvcService } from './../treasure-svc.service';
-import { Encounter, Loot } from './../treasure-types';
+import { Encounter, Loot, HoardSetup } from './../treasure-types';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
@@ -15,8 +15,18 @@ export class ResultScreenComponent implements OnInit {
     private svc: TreasureSvcService
   ) {};
 
+  initiateHoard: HoardSetup = {
+    name: "",
+    encounterLevel: "",
+    timeStamp: ""
+  };
+
   ngOnInit(): void {
     console.log(this.svc.hoardSetup);
+    this.initiateHoard.name = this.svc.hoardSetup.name;
+    this.initiateHoard.encounterLevel = this.svc.hoardSetup.encounterLevel;
+    this.initiateHoard.timeStamp = this.svc.hoardSetup.timeStamp;
+    console.log(this.initiateHoard);
   }
 
   addMe = this.svc.otherHoard;
