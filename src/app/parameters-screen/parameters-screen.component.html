@@ -10,13 +10,11 @@
 <div class="mx-auto">
     <label for="levelSelect">Select Encounter Level:</label>
     <br>
-    <select class="form-select" 
+    <select class="browser-default custom-select" 
         id="levelSelect"
-        [(ngModel)]="encounterLevel" 
-        required 
-        name="encounterLevel"  
+        [(ngModel)]="encounterLevel"    
     >
-        <option value="0" selected>1/8</option>
+        <option value="0">1/8</option>
         <option value="1">1/6</option>
         <option value="2">1/4</option>
         <option value="3">1/3</option>
