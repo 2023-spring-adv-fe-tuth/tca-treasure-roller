@@ -275,6 +275,16 @@ const cursedItems: Loot[] = [
       itemName: "Potion of Diminution",
       saleValue: 0,
       notes: "A small vial of greenish liquid - curses the drinker to be 6in tall!"
+  },
+  {
+    itemName: "Periapt of Disease",
+    saleValue: 0,
+    notes: "gives the wearer a constant disease which renews even if cured"
+  },
+  {
+    itemName: "Backbiting Longsword",
+    saleValue: 0,
+    notes: "On a roll fo natural 1 this +1 longsword strikes the wielder"
   }
 ]
 
@@ -290,6 +300,18 @@ const armorItems: Loot[] = [
       itemValue: 4002,
       saleValue: 2001,
       notes: "+2 AC, but why?"
+  },
+  {
+    itemName: "+1 Hide Armor",
+    itemValue: 1160,
+    saleValue: 580,
+    notes: "medium armor with a +1 ac bonus"
+  },
+  {
+    itemName: "+3 chain shirt",
+    itemValue: 9175,
+    saleValue: 4587.5,
+    notes: "light armor with +3 ac bonus"
   }
 
 ]
@@ -306,6 +328,18 @@ const weaponItems: Loot[] = [
     itemValue: 2318,
     saleValue: 1159,
     notes: "adds +1 to hit and damage to arrows fired"
+  },
+  {
+    itemName: "+2 greatsword",
+    itemValue: 8380,
+    saleValue: 4190,
+    notes: "two-handed melee weapon with +2 hit and damage"
+  },
+  {
+    itemName: "Flametongue Falcata",
+    itemValue: 40000,
+    saleValue: 20000,
+    notes: "falming burst +2 exotic weapon shoots scorching rays"
   }
 
 ]
@@ -527,6 +561,12 @@ const wandItems: Loot[] = [
         itemValue: 22000,
         saleValue: 11000,
         notes: "Target is protected with DR 10/Adamantine, but it only absorbs up to 150 damage"
+    },
+    {
+      itemName: "Wand of Scorching Ray",
+      itemValue: 550,
+      saleValue: 275,
+      notes: "Ray of fire deals 5d6 damage"
     }
 ]
 
