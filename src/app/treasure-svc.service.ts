@@ -189,7 +189,7 @@ const secondTreasure: Loot[] = [
 
 const dummySetup: HoardSetup = {
   name: "Orc Camp",
-  encounterLevel: 9,
+  encounterLevel: "9",
   timeStamp: "3-23-2023"
 }
 

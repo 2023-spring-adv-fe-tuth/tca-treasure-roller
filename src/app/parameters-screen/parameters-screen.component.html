@@ -1,6 +1,48 @@
-<label>Name your hoard: <input type="text"></label>
-<label>Encounter Level: <input type="text"> </label>
+<div class="mx-auto">
+    <label>Name your hoard: 
+        <input type="text"
+            class="form-control"
+            [(ngModel)]="hoardName"
+            placeholder="Encounter"
+        >
+    </label>
+</div>
+<div class="mx-auto">
+    <label for="levelSelect">Select Encounter Level:</label>
+    <br>
+    <select class="browser-default custom-select" 
+        id="levelSelect"
+        [(ngModel)]="encounterLevel"    
+    >
+        <option selected>1/8</option>
+        <option value="1">1/6</option>
+        <option value="2">1/4</option>
+        <option value="3">1/3</option>
+        <option value="4">1/2</option>
+        <option value="5">1</option>
+        <option value="6">2</option>
+        <option value="7">3</option>
+        <option value="8">4</option>
+        <option value="9">5</option>
+        <option value="10">6</option>
+        <option value="11">7</option>
+        <option value="12">8</option>
+        <option value="13">9</option>
+        <option value="14">10</option>
+        <option value="15">11</option>
+        <option value="16">12</option>
+        <option value="17">13</option>
+        <option value="18">14</option>
+        <option value="19">15</option>
+        <option value="20">16</option>
+        <option value="21">17</option>
+        <option value="22">18</option>
+        <option value="23">19</option>
+        <option value="24">20</option>
+    </select>
+</div>
+
 <button
     class="btn btn-success"
     (click)="rollTreasure()"
-    >Generate!</button>
+>Generate!</button>
