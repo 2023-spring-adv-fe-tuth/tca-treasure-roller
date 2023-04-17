@@ -22,33 +22,42 @@ export class TreasureSvcService {
 
 constructor() { }
 
-grs: GameResult[] = gameResults3;
-testH: Hoard[] = testHistory;
-otherHoard: Hoard = thirdHoard;
-itsTwo: Loot[] = secondTreasure;
-reroll: Loot[] = treasureItems;
+  grs: GameResult[] = gameResults3;
+  testH: Hoard[] = testHistory;
+  otherHoard: Hoard = thirdHoard;
+  itsTwo: Loot[] = secondTreasure;
+  reroll: Loot[] = treasureItems;
 
-leaderboard = () => leaderboard(this.grs);
+  leaderboard = () => leaderboard(this.grs);
 
-forgeHistory = (adding: Hoard) => {
-  this.testH = forgeHistory(this.testH, adding);
-}
+  forgeHistory = (adding: Hoard) => {
+    this.testH = forgeHistory(this.testH, adding);
+  }
 
-addGameResult = (adding: GameResult) => {
-  this.grs = addGameResult(this.grs, adding);
-};
+  addGameResult = (adding: GameResult) => {
+    this.grs = addGameResult(this.grs, adding);
+  };
 
-getPlayerNames = () => getPlayerNames(this.grs);
+  getPlayerNames = () => getPlayerNames(this.grs);
 
-// this will be used when a game starts (for a game)
-setupInfo: {
-  start: string; // will be date
-  players: string[] // IMPORTANT to make this property a specific array type
-} = { 
-  start: "", // initiate as empty string to put date in
-  players: [] // this will store player names
-};
+  // this will be used when a game starts (for a game)
+  setupInfo: {
+    start: string; // will be date
+    players: string[] // IMPORTANT to make this property a specific array type
+  } = { 
+    start: "", // initiate as empty string to put date in
+    players: [] // this will store player names
+  };
 
+  hoardSetup: {
+    name: string;
+    encounterLevel: string;
+    timeStamp: string;
+  } = {
+    name: "",
+    encounterLevel: "",
+    timeStamp: ""
+  };
 };
 
 const gameResults3: GameResult[] = [

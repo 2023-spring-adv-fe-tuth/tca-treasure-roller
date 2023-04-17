@@ -1,4 +1,3 @@
-import { HoardSetup } from './../treasure-types';
 import { TreasureSvcService } from './../treasure-svc.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -33,14 +32,14 @@ export class ParametersScreenComponent implements OnInit {
   };
 
   rollTreasure = () => {
-    //this.router.navigateByUrl("result-screen");
+    this.router.navigateByUrl("result-screen");
     this.hoardName = this.hoardName ? this.hoardName : "Encounter";
     console.log(this.hoardName);
-    let toPass: HoardSetup = {
+    this.svc.hoardSetup = {
       name: this.hoardName,
       encounterLevel: this.encounterLevel,
-      timeStamp: "12"
-    }
+      timeStamp: new Date().toISOString()
+    };
   };
 
 }

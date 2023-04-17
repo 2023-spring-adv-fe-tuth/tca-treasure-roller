@@ -1,6 +1,6 @@
 import { TreasureSvcService } from './../treasure-svc.service';
 import { Encounter, Loot } from './../treasure-types';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
@@ -9,11 +9,15 @@ import { Location } from '@angular/common';
   styleUrls: ['./result-screen.component.css']
 })
 
-export class ResultScreenComponent {
+export class ResultScreenComponent implements OnInit {
   constructor(
     private location: Location,
     private svc: TreasureSvcService
   ) {};
+
+  ngOnInit(): void {
+    console.log(this.svc.hoardSetup);
+  }
 
   addMe = this.svc.otherHoard;
   showMe = this.svc.itsTwo;
