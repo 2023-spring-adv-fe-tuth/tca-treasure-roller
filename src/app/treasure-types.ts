@@ -21,6 +21,13 @@ export interface HoardSetup {
     timeStamp: string;
 }
 
+export interface EncounterBudget {
+    label: string;
+    budget: number;
+    slowBudget?: number;
+    fastBudget?: number;
+}
+
 export type GetLoot = (rolls: Loot[]) => string[];
 
 export type Encounter = (treasures: Loot[], next: Loot) => Loot[];

@@ -28,6 +28,8 @@ export class ParametersScreenComponent implements OnInit {
       checked: false
     }));
 
+    encounterLevelSelect = this.svc.elTrack;
+
     console.log(this.extraPlayers);
   };
 
@@ -40,12 +42,5 @@ export class ParametersScreenComponent implements OnInit {
       timeStamp: new Date().toISOString()
     };
   };
-
-  // chooseEncounterLevel = () => {
-    
-  //   else {
-  //     this.rollTreasure();
-  //   }
-  // }
 
 }

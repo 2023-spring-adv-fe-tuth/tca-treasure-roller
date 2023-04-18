@@ -5,7 +5,8 @@ import {
   Hoard,
   sellWholeHoard,
   TreasureHistory,
-  forgeHistory
+  forgeHistory,
+  EncounterBudget
 } from './treasure-types';
 import { Injectable } from '@angular/core';
 import { 
@@ -27,6 +28,7 @@ constructor() { }
   otherHoard: Hoard = thirdHoard;
   itsTwo: Loot[] = secondTreasure;
   reroll: Loot[] = treasureItems;
+  elTrack = encounterLevels;
 
   leaderboard = () => leaderboard(this.grs);
 
@@ -593,7 +595,7 @@ const tstChrts = [
   wandItems
 ];
 
-const encounterLevels = [
+const encounterLevels: EncounterBudget[] = [
   {label: "1/8", budget: 35}
   , {label: "1/6", budget: 45}
   , {label: "1/4", budget: 65}
