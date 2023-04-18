@@ -28,7 +28,7 @@ constructor() { }
   otherHoard: Hoard = thirdHoard;
   itsTwo: Loot[] = secondTreasure;
   reroll: Loot[] = treasureItems;
-  elTrack = encounterLevels;
+  elTrack: EncounterBudget[] = encounterLevels;
 
   leaderboard = () => leaderboard(this.grs);
 
