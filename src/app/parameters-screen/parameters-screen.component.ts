@@ -21,6 +21,7 @@ export class ParametersScreenComponent implements OnInit {
 
   hoardName = "";
   encounterLevel = "";
+  encounterLevelSelect = this.svc.elTrack;
 
   ngOnInit(): void {
     this.extraPlayers = this.svc.getPlayerNames().map(x => ({
@@ -28,7 +29,7 @@ export class ParametersScreenComponent implements OnInit {
       checked: false
     }));
 
-    encounterLevelSelect = this.svc.elTrack;
+    
 
     console.log(this.extraPlayers);
   };
