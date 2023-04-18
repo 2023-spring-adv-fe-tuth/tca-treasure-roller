@@ -1,60 +1,26 @@
-<form class="needs-validation">
-    <div class="form-group row">
-        <label for="encounterLevel" class="col-md-3 col-form-label">
-            Name your hoard:                
-        </label>
-        <div class="col-md-6">
-            <input type="text"
-                class="form-control"
-                [(ngModel)]="hoardName"
-                placeholder="Encounter"
-                id="encounterLevel"
-            >
-        </div>
+<div class="form-group row">
+    <label for="encounterLevel" class="col-md-3 col-form-label">
+        Name your hoard:                
+    </label>
+    <div class="col-md-6">
+        <input type="text"
+            class="form-control"
+            [(ngModel)]="hoardName"
+            placeholder="Encounter"
+            id="encounterLevel"
+        >
     </div>
-    <div class="form-group row">
-        <label for="levelSelect"
-            class="col-md-3 col-form-label"
-        >Select Encounter Level:</label>
-        <div class="col-md-3">
-            <select class="form-control" 
-            id="levelSelect"
-            name="encounterLevel"
-            [(ngModel)]="encounterLevel" 
-            required   
-            >
-                <option value="0">1/8</option>
-                <option value="1">1/6</option>
-                <option value="2">1/4</option>
-                <option value="3">1/3</option>
-                <option value="4">1/2</option>
-                <option value="5">1</option>
-                <option value="6">2</option>
-                <option value="7">3</option>
-                <option value="8">4</option>
-                <option value="9">5</option>
-                <option value="10">6</option>
-                <option value="11">7</option>
-                <option value="12">8</option>
-                <option value="13">9</option>
-                <option value="14">10</option>
-                <option value="15">11</option>
-                <option value="16">12</option>
-                <option value="17">13</option>
-                <option value="18">14</option>
-                <option value="19">15</option>
-                <option value="20">16</option>
-                <option value="21">17</option>
-                <option value="22">18</option>
-                <option value="23">19</option>
-                <option value="24">20</option>
-            </select>
-        </div>
+</div>
+<div class="form-group row">
+    <label for="levelSelect"
+        class="col-md-3 col-form-label"
+    >Select Encounter Level:</label>
+    <div class="col-md-3">
+        <select [(ngModel)]="encounterLevel" class="form-control" name="encounterLevel">
+            <option *ngFor="let el of encounterLevelSelect" [ngValue]="el">{{ el.label }}</option>
+        </select>
     </div>
-</form>
-<select [(ngModel)]="encounterLevelSelect" class="form-control">
-    
-</select>
+</div>
 
 
 <button
