@@ -34,12 +34,18 @@ export class ParametersScreenComponent implements OnInit {
   rollTreasure = () => {
     this.router.navigateByUrl("result-screen");
     this.hoardName = this.hoardName ? this.hoardName : "Encounter";
-    console.log(this.hoardName);
     this.svc.hoardSetup = {
       name: this.hoardName,
       encounterLevel: this.encounterLevel,
       timeStamp: new Date().toISOString()
     };
   };
+
+  // chooseEncounterLevel = () => {
+    
+  //   else {
+  //     this.rollTreasure();
+  //   }
+  // }
 
 }

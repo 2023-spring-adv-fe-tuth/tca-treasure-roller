@@ -592,3 +592,41 @@ const tstChrts = [
   cursedItems,
   wandItems
 ];
+
+const encounterLevels = [
+  {label: "1/8", budget: 35}
+  , {label: "1/6", budget: 45}
+  , {label: "1/4", budget: 65}
+  , {label: "1/3", budget: 85}
+  , {label: "1/2", budget: 130}
+  , {label: "1", budget: 260}
+  , {label: "2", budget: 550}
+  , {label: "3", budget: 800}
+  , {label: "4", budget: 1150}
+  , {label: "5", budget: 1550}
+  , {label: "6", budget: 2000}
+  , {label: "7", budget: 2600}
+  , {label: "8", budget: 3350}
+  , {label: "9", budget: 4250}
+  , {label: "10", budget: 5450}
+  , {label: "11", budget: 7000}
+  , {label: "12", budget: 9000}
+  , {label: "13", budget: 11600}
+  , {label: "14", budget: 15000}
+  , {label: "15", budget: 19500}
+  , {label: "16", budget: 25000}
+  , {label: "17", budget: 32000}
+  , {label: "18", budget: 41000}
+  , {label: "19", budget: 53000}
+  , {label: "20", budget: 67000}
+  , {label: "21", budget: 84000}
+  , {label: "22", budget: 104000}
+  , {label: "23", budget: 127000}
+  , {label: "24", budget: 155000}
+  , {label: "25", budget: 185000}
+  , {label: "26", budget: 220000}
+  , {label: "27", budget: 260000}
+  , {label: "28", budget: 305000}
+  , {label: "29", budget: 360000}
+  , {label: "30", budget: 420000}
+]
