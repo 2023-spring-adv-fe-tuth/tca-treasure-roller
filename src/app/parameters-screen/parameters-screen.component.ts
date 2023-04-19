@@ -15,13 +15,20 @@ export class ParametersScreenComponent implements OnInit {
     private svc: TreasureSvcService
   ) {};
 
+  form = new FormGroup({
+    encounterLevel: new FormControl()
+  })
+
   extraPlayers: {
     name: string;
     checked: boolean;
   }[] = [];
 
+  get encounterLevel(): any {
+    return this.form.get('encounterLevel');
+  }
   hoardName = "";
-  encounterLevel = "";
+  // encounterLevel = "";
   encounterLevelSelect = this.svc.elTrack;
 
   ngOnInit(): void {
@@ -29,8 +36,6 @@ export class ParametersScreenComponent implements OnInit {
       name: x,
       checked: false
     }));
-
-    
 
     console.log(this.extraPlayers);
   };
