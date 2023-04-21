@@ -15,8 +15,9 @@
     <label class="col-md-3 col-form-label"
     >Select Encounter Level:</label>
     <div class="col-md-3">
-        <select class="form-control" required>
-            <option *ngFor="let el of encounterLevelSelect" [value]="el.label">{{ el.label }}</option>
+        <select class="form-control" required
+        [(ngModel)]="encounterLevel">
+            <option *ngFor="let el of encounterLevelSelect">{{ el.label }}</option>
         </select>
     </div>
 </div>
