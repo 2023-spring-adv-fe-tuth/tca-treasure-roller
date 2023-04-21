@@ -4,7 +4,6 @@ import {
   HoardSetup,
   Hoard,
   sellWholeHoard,
-  TreasureHistory,
   forgeHistory,
   EncounterBudget
 } from './treasure-types';

@@ -72,3 +72,8 @@ export const seeNest = (chart: Loot[]) => {
     let putOut = chart[makeRando];
     return putOut;
 };
+
+export const collectLoot: Encounter = (pile, item) => [
+    ...pile,
+    item
+];
