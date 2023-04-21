@@ -1,6 +1,6 @@
 
 <div class="form-group row">
-    <label for="encounterLevel" class="col-md-3 col-form-label">
+    <label class="col-md-3 col-form-label">
         Name your hoard:                
     </label>
     <div class="col-md-6">
@@ -8,17 +8,15 @@
             class="form-control"
             [(ngModel)]="hoardName"
             placeholder="Encounter"
-            id="encounterLevel"
         >
     </div>
 </div>
-<div class="form-group row" [formGroup]="form">
-    <label for="levelSelect"
-        class="col-md-3 col-form-label"
+<div class="form-group row">
+    <label class="col-md-3 col-form-label"
     >Select Encounter Level:</label>
     <div class="col-md-3">
-        <select class="form-control" formControlName="encounterLevel">
-            <option *ngFor="let el of encounterLevelSelect" [ngValue]="el">{{ el.label }}</option>
+        <select class="form-control" required>
+            <option *ngFor="let el of encounterLevelSelect" [value]="el.label">{{ el.label }}</option>
         </select>
     </div>
 </div>
