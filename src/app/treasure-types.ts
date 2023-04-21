@@ -73,7 +73,6 @@ export const seeNest = (chart: Loot[]) => {
     return putOut;
 };
 
-export const collectLoot: Encounter = (pile, item) => [
-    ...pile,
-    item
-];
+export const collectLoot: Encounter = (pile, item) => {
+    return pile.some(x => x.saleValue == 0) && item.saleValue == 0 ? pile : [ ...pile, item ]
+};
