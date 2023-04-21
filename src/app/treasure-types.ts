@@ -76,3 +76,19 @@ export const seeNest = (chart: Loot[]) => {
 export const collectLoot: Encounter = (pile, item) => {
     return pile.some(x => x.saleValue == 0) && item.saleValue == 0 ? pile : [ ...pile, item ]
 };
+
+export const gatherLoot = (charts: [][], chest: Loot[], budget: number) => {
+    let remainder = budget;
+    do {
+        let rolledItem = seeNest(tstngRando(charts));
+        let useValue = rolledItem.itemValue ? rolledItem.itemValue : rolledItem.saleValue;
+        if (useValue <= (budget * 0.3)) {
+            chest = collectLoot(chest, rolledItem);
+            remainder = remainder - useValue;
+        } else {
+            remainder = remainder;
+        }
+    }
+    while (remainder >= (budget * 0.05));
+    return [chest, remainder];
+};

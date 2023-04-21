@@ -28,6 +28,7 @@ constructor() { }
   itsTwo: Loot[] = secondTreasure;
   reroll: Loot[] = treasureItems;
   elTrack: EncounterBudget[] = encounterLevels;
+  charts = tstChrts;
 
   leaderboard = () => leaderboard(this.grs);
 
@@ -59,6 +60,8 @@ constructor() { }
     encounterLevel: "",
     timeStamp: ""
   };
+
+  
 };
 
 const gameResults3: GameResult[] = [
