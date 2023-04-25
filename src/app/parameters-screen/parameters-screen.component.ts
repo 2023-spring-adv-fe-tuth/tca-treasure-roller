@@ -24,8 +24,7 @@ export class ParametersScreenComponent implements OnInit {
   hoardName = "";
   encounterLevel = "";
   encounterLevelSelect = this.svc.elTrack;
-  // foundBudget = 0 ? 0 : this.encounterLevelSelect.find(x => x.label == this.encounterLevel)?.budget;
-  budget = 0; //? 0 : Number(this.foundBudget);
+  budget = 0;
   ngOnInit(): void {
     this.extraPlayers = this.svc.getPlayerNames().map(x => ({
       name: x,
@@ -36,11 +35,10 @@ export class ParametersScreenComponent implements OnInit {
   };
 
   rollTreasure = () => {
-    if (this.encounterLevel.length == 0) {
+    if (this.encounterLevel.length == 0 && this.budget == 0) {
       return;
     }
     this.router.navigateByUrl("result-screen");
-    console.log(this.svc.elTrack.filter(x => x.label == this.encounterLevel));
     this.svc.hoardSetup = {
       name: this.hoardName ? this.hoardName : "Encounter",
       encounterLevel: this.encounterLevel,
