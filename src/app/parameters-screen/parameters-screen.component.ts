@@ -40,10 +40,9 @@ export class ParametersScreenComponent implements OnInit {
       return;
     }
     this.router.navigateByUrl("result-screen");
-    this.hoardName = this.hoardName ? this.hoardName : "Encounter";
     // this.budget = this.budget ? this.budget : this.svc.elTrack.filter(x => )
     this.svc.hoardSetup = {
-      name: this.hoardName,
+      name: this.hoardName ? this.hoardName : "Encounter",
       budget: this.budget,
       timeStamp: new Date().toISOString()
     };
