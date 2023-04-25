@@ -22,7 +22,7 @@ export class ParametersScreenComponent implements OnInit {
 
   
   hoardName = "";
-  encounterLevel = "";
+  budget = 0;
   encounterLevelSelect = this.svc.elTrack;
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class ParametersScreenComponent implements OnInit {
     this.hoardName = this.hoardName ? this.hoardName : "Encounter";
     this.svc.hoardSetup = {
       name: this.hoardName,
-      encounterLevel: this.encounterLevel,
+      budget: this.budget,
       timeStamp: new Date().toISOString()
     };
   };

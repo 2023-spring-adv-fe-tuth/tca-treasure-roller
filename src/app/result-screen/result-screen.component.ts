@@ -15,18 +15,18 @@ export class ResultScreenComponent implements OnInit {
     private svc: TreasureSvcService
   ) {};
 
-  initiateHoard: HoardSetup = {
-    name: "",
-    encounterLevel: "",
-    timeStamp: ""
-  };
+  // initiateHoard: HoardSetup = {
+  //   name: "",
+  //   budget: 0,
+  //   timeStamp: ""
+  // };
 
   ngOnInit(): void {
     console.log(this.svc.hoardSetup);
-    this.initiateHoard.name = this.svc.hoardSetup.name;
-    this.initiateHoard.encounterLevel = this.svc.hoardSetup.encounterLevel;
-    this.initiateHoard.timeStamp = this.svc.hoardSetup.timeStamp;
-    console.log(this.initiateHoard);
+    // this.initiateHoard.name = this.svc.hoardSetup.name;
+    // this.initiateHoard.budget = this.svc.hoardSetup.encounterLevel;
+    // this.initiateHoard.timeStamp = this.svc.hoardSetup.timeStamp;
+    // console.log(this.initiateHoard);
   }
 
   addMe = this.svc.otherHoard;

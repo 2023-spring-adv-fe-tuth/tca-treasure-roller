@@ -53,11 +53,11 @@ constructor() { }
 
   hoardSetup: {
     name: string;
-    encounterLevel: string;
+    budget: number;
     timeStamp: string;
   } = {
     name: "",
-    encounterLevel: "",
+    budget: 0,
     timeStamp: ""
   };
 
@@ -202,7 +202,7 @@ const secondTreasure: Loot[] = [
 
 const dummySetup: HoardSetup = {
   name: "Orc Camp",
-  encounterLevel: "9",
+  budget: 5000,
   timeStamp: "3-23-2023"
 }
 

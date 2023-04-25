@@ -17,7 +17,7 @@ export interface Hoard {
 
 export interface HoardSetup {
     name: string;
-    encounterLevel: string;
+    budget: number;
     timeStamp: string;
 }
 
