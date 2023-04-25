@@ -53,10 +53,12 @@ constructor() { }
 
   hoardSetup: {
     name: string;
+    encounterLevel: string;
     budget: number;
     timeStamp: string;
   } = {
     name: "",
+    encounterLevel: "",
     budget: 0,
     timeStamp: ""
   };

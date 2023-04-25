@@ -23,9 +23,9 @@ export class ParametersScreenComponent implements OnInit {
 
   hoardName = "";
   encounterLevel = "";
-  budget = 0;
   encounterLevelSelect = this.svc.elTrack;
-
+  // foundBudget = 0 ? 0 : this.encounterLevelSelect.find(x => x.label == this.encounterLevel)?.budget;
+  budget = 0; //? 0 : Number(this.foundBudget);
   ngOnInit(): void {
     this.extraPlayers = this.svc.getPlayerNames().map(x => ({
       name: x,
@@ -40,10 +40,11 @@ export class ParametersScreenComponent implements OnInit {
       return;
     }
     this.router.navigateByUrl("result-screen");
-    // this.budget = this.budget ? this.budget : this.svc.elTrack.filter(x => )
+    console.log(this.svc.elTrack.filter(x => x.label == this.encounterLevel));
     this.svc.hoardSetup = {
       name: this.hoardName ? this.hoardName : "Encounter",
-      budget: this.budget,
+      encounterLevel: this.encounterLevel,
+      budget: this.budget ? this.budget : Number(this.encounterLevelSelect.find(x => x.label == this.encounterLevel)?.budget),
       timeStamp: new Date().toISOString()
     };
   };
