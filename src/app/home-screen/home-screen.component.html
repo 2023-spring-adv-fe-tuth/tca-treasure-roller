@@ -30,7 +30,8 @@
 >
   <ngb-panel *ngFor="let hoard of treasureHistory">
     <ng-template ngbPanelTitle>
-      {{ hoard.name }} -- {{ hoard.timeStamp }}
+      <span class="h5">{{ hoard.name }} -- {{ hoard.timeStamp }}</span>
+      
     </ng-template>
     <ng-template ngbPanelContent>
       <ul class="list-group">
