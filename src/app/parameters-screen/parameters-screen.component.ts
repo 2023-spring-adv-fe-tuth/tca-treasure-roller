@@ -1,6 +1,7 @@
 import { TreasureSvcService } from './../treasure-svc.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EncounterBudget } from '../treasure-types';
 
 @Component({
   selector: 'app-parameters-screen',
@@ -20,8 +21,8 @@ export class ParametersScreenComponent implements OnInit {
     checked: boolean;
   }[] = [];
 
-  
   hoardName = "";
+  encounterLevel = "";
   budget = 0;
   encounterLevelSelect = this.svc.elTrack;
 
@@ -35,8 +36,12 @@ export class ParametersScreenComponent implements OnInit {
   };
 
   rollTreasure = () => {
+    if (this.encounterLevel.length == 0) {
+      return;
+    }
     this.router.navigateByUrl("result-screen");
     this.hoardName = this.hoardName ? this.hoardName : "Encounter";
+    // this.budget = this.budget ? this.budget : this.svc.elTrack.filter(x => )
     this.svc.hoardSetup = {
       name: this.hoardName,
       budget: this.budget,
