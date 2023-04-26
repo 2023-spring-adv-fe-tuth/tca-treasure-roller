@@ -1,5 +1,5 @@
 import { TreasureSvcService } from './../treasure-svc.service';
-import { Encounter, Loot, HoardSetup, getItemNames } from './../treasure-types';
+import { Encounter, Loot, HoardSetup, getItemNames, gatherLoot } from './../treasure-types';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
@@ -18,6 +18,7 @@ export class ResultScreenComponent implements OnInit {
   addMe = this.svc.otherHoard;
   showMe = this.svc.itsTwo;
   reRoll = this.svc.reroll;
+  openChest: Loot[] = [];
 
   saveTreasure = () => {
     this.svc.addGameResult({
@@ -35,5 +36,8 @@ export class ResultScreenComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.svc.hoardSetup);
     console.log(getItemNames(this.svc.reroll));
+    if (this.svc.hoardSetup.name.length > 0) {
+      console.log(gatherLoot(this.svc.charts, this.openChest, this.svc.hoardSetup.budget));
+    };
   }
 }

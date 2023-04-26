@@ -78,7 +78,7 @@ export const collectLoot: Encounter = (pile, item) => {
     return pile.some(x => x.saleValue == 0) && item.saleValue == 0 ? pile : [ ...pile, item ]
 };
 
-export const gatherLoot = (charts: [][], chest: Loot[], budget: number) => {
+export const gatherLoot = (charts: Loot[][], chest: Loot[], budget: number) => {
     let remainder = budget;
     do {
         let rolledItem = secondRoll(firstRoll(charts));
