@@ -37,8 +37,6 @@ export type Encounter = (treasures: Loot[], next: Loot) => Loot[];
 
 export type TreasureHistory = (history: Hoard[], newTreasure: Hoard) => Hoard[];
 
-export const checkTheItems = (items: Loot[]) => items.map(x => ({...x, checked: false}));
-
 export const hoardSaleValuesOnly = (items: Loot[]) => items.filter(
     x => x.itemValue === undefined).reduce(
         (acc, x) => acc + x.saleValue, 0
