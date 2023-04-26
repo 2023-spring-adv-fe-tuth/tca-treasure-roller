@@ -15,20 +15,14 @@ export class HoardScreenComponent {
   
   hoardToShow = this.svc.passHoard;
   showMe = this.svc.passHoard.items;
+  checked = false;
 
   get total() {
-    return this.showMe.filter(x => x.checked)
-      .reduce(
-        (acc, a) => acc + a.saleValue, 0
-      );
+    return 
   }
   
   updateHoard = () => {
-    this.svc.passHoard.items = this.showMe.filter(x => !x.checked);
-    console.log("checked:");
-    console.log(this.showMe.filter(x => x.checked));
-    console.log("not checked");
-    console.log(this.showMe.filter(x => !x.checked))
+    
     this.loc.historyGo(-1);
   }
   

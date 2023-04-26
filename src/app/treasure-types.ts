@@ -3,7 +3,6 @@ export interface Loot {
     itemValue?: number;
     saleValue: number;
     notes: string;
-    checked?: boolean;
 };
 
 export interface Hoard {
