@@ -43,6 +43,8 @@ export const getItemNames: GetLoot = (items) => {
     return hoardItems;
 };
 
+export const checkTheItems = (items: Loot[]) => items.map(x => ({...x, checked: false}));
+
 export const hoardSaleValuesOnly = (items: Loot[]) => items.filter(
     x => x.itemValue === undefined).reduce(
         (acc, x) => acc + x.saleValue, 0
