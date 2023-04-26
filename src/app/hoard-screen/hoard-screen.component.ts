@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { TreasureSvcService } from '../treasure-svc.service';
-import { Loot, checkTheItems, getItemNames } from '../treasure-types';
+import { Loot, checkTheItems } from '../treasure-types';
 
 @Component({
   selector: 'app-hoard-screen',

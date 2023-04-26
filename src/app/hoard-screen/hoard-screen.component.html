@@ -30,6 +30,7 @@
             </td>
         </tr>
 </table>
+<h5 *ngIf="total > 0">Sell these items for {{ total }}gp</h5>
 <button class="btn"
     (click)="updateHoard()"
 >Return to Home</button>
