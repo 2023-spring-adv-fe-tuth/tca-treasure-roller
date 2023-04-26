@@ -39,6 +39,7 @@ export class ResultScreenComponent implements OnInit {
     name: this.svc.hoardSetup.name,
     timeStamp: this.svc.hoardSetup.timeStamp,
     budget: this.svc.hoardSetup.budget,
+    encounterLevel: this.svc.hoardSetup.encounterLevel,
     items: this.showMe,
     totalValue: fullHoardValue(this.showMe),
     totalSaleValue: sellWholeHoard(this.showMe),

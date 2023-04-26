@@ -8,8 +8,8 @@ export interface Loot {
 export interface Hoard {
     name: string;
     timeStamp: string;
+    encounterLevel?: string;
     budget?: number;
-    encounterLevel?: number;
     items: Loot[];
     totalValue: number;
     totalSaleValue: number;

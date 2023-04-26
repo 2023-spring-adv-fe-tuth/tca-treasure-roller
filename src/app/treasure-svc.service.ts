@@ -210,7 +210,7 @@ const secondTreasure: Loot[] = [
 const dummyHoard: Hoard = {
   name: "Orc Camp",
   timeStamp: "3-23-2023",
-  encounterLevel: 9,
+  encounterLevel: "9",
   items: secondTreasure,
   totalValue: fullHoardValue(secondTreasure),
   totalSaleValue: sellWholeHoard(secondTreasure)
@@ -219,7 +219,7 @@ const dummyHoard: Hoard = {
 const otherHoard: Hoard = {
   name: "Dragon's Lair",
   timeStamp: "9-22-2022",
-  encounterLevel: 11,
+  encounterLevel: "11",
   items: treasureItems,
   totalValue: fullHoardValue(treasureItems),
   totalSaleValue: sellWholeHoard(treasureItems)
