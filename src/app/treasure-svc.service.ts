@@ -1,7 +1,6 @@
 import { 
   Loot, 
   fullHoardValue,
-  HoardSetup,
   Hoard,
   sellWholeHoard,
   forgeHistory,

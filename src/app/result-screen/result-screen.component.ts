@@ -1,5 +1,5 @@
 import { TreasureSvcService } from './../treasure-svc.service';
-import { Encounter, Loot, HoardSetup, getItemNames, gatherLoot, Hoard, fullHoardValue, sellWholeHoard } from './../treasure-types';
+import { Loot, gatherLoot, Hoard, fullHoardValue, sellWholeHoard } from './../treasure-types';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 

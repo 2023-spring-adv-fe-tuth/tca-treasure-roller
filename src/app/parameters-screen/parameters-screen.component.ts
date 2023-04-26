@@ -1,7 +1,6 @@
 import { TreasureSvcService } from './../treasure-svc.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EncounterBudget } from '../treasure-types';
 
 @Component({
   selector: 'app-parameters-screen',
