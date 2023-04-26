@@ -1,5 +1,5 @@
 import { TreasureSvcService } from './../treasure-svc.service';
-import { Encounter, Loot, HoardSetup } from './../treasure-types';
+import { Encounter, Loot, HoardSetup, getItemNames } from './../treasure-types';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
@@ -14,20 +14,6 @@ export class ResultScreenComponent implements OnInit {
     private location: Location,
     private svc: TreasureSvcService
   ) {};
-
-  // initiateHoard: HoardSetup = {
-  //   name: "",
-  //   budget: 0,
-  //   timeStamp: ""
-  // };
-
-  ngOnInit(): void {
-    console.log(this.svc.hoardSetup);
-    // this.initiateHoard.name = this.svc.hoardSetup.name;
-    // this.initiateHoard.budget = this.svc.hoardSetup.encounterLevel;
-    // this.initiateHoard.timeStamp = this.svc.hoardSetup.timeStamp;
-    // console.log(this.initiateHoard);
-  }
 
   addMe = this.svc.otherHoard;
   showMe = this.svc.itsTwo;
@@ -45,4 +31,9 @@ export class ResultScreenComponent implements OnInit {
   rerollTreasure = () => {
     this.showMe = this.reRoll;
   };
+
+  ngOnInit(): void {
+    console.log(this.svc.hoardSetup);
+    console.log(getItemNames(this.svc.reroll));
+  }
 }

@@ -42,13 +42,12 @@ constructor() { }
 
   getPlayerNames = () => getPlayerNames(this.grs);
 
-  // this will be used when a game starts (for a game)
   setupInfo: {
     start: string; // will be date
     players: string[] // IMPORTANT to make this property a specific array type
   } = { 
-    start: "", // initiate as empty string to put date in
-    players: [] // this will store player names
+    start: "",
+    players: []
   };
 
   hoardSetup: {
@@ -61,9 +60,7 @@ constructor() { }
     encounterLevel: "",
     budget: 0,
     timeStamp: ""
-  };
-
-  
+  }; 
 };
 
 const gameResults3: GameResult[] = [
@@ -201,12 +198,6 @@ const secondTreasure: Loot[] = [
       notes: "Many people find it helpful to keep scrolls of utilitiy spells such as this, saving their memory for more powerful spells."
   }
 ];
-
-const dummySetup: HoardSetup = {
-  name: "Orc Camp",
-  budget: 5000,
-  timeStamp: "3-23-2023"
-}
 
 const dummyHoard: Hoard = {
   name: "Orc Camp",

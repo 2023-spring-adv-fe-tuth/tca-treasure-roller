@@ -61,15 +61,15 @@ export const sellWholeHoard = (items: Loot[]) => items.reduce(
 
 export const forgeHistory: TreasureHistory = (exists, add) => [...exists, add];
 
-export const tstngRando = (charts: Loot[][]) => {
+export const firstRoll = (charts: Loot[][]) => {
     let makeRando = Math.floor(
         Math.random() * charts.length);
     let putsOut = charts[makeRando];
     return putsOut;
 };
 
-export const seeNest = (chart: Loot[]) => {
-    let makeRando = Math.floor(Math.random() * 2);
+export const secondRoll = (chart: Loot[]) => {
+    let makeRando = Math.floor(Math.random() * chart.length);
     let putOut = chart[makeRando];
     return putOut;
 };
@@ -81,7 +81,7 @@ export const collectLoot: Encounter = (pile, item) => {
 export const gatherLoot = (charts: [][], chest: Loot[], budget: number) => {
     let remainder = budget;
     do {
-        let rolledItem = seeNest(tstngRando(charts));
+        let rolledItem = secondRoll(firstRoll(charts));
         let useValue = rolledItem.itemValue ? rolledItem.itemValue : rolledItem.saleValue;
         if (useValue <= (budget * 0.3)) {
             chest = collectLoot(chest, rolledItem);
