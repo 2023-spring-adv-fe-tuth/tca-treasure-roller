@@ -30,6 +30,14 @@ constructor() { }
   elTrack: EncounterBudget[] = encounterLevels;
   charts = tstChrts;
 
+  passHoard: Hoard = {
+    name: '',
+    timeStamp: '',
+    items: [],
+    totalValue: 0,
+    totalSaleValue: 0
+  };
+
   leaderboard = () => leaderboard(this.grs);
 
   forgeHistory = (adding: Hoard) => {

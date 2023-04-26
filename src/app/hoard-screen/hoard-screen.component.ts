@@ -13,7 +13,8 @@ export class HoardScreenComponent {
     private svc: TreasureSvcService
   ) {}
 
-  showMe = this.svc.itsTwo;
+  hoardToShow = this.svc.passHoard;
+  showMe = this.svc.passHoard.items;
   
   updateHoard = () => {
     this.loc.historyGo(-1);
