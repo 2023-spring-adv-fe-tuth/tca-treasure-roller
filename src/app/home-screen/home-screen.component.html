@@ -34,11 +34,12 @@
     </ng-template>
     <ng-template ngbPanelContent>
       <ul class="list-group">
+        <li class="list-group-item" *ngIf="hoard.encounterLevel">
+          Encounter Level: {{ hoard.encounterLevel }}
+        </li>
         <li class="list-group-item" *ngIf="hoard.budget">
           Hoard Budget: {{ hoard.budget }}
         </li>
-        <li class="list-group-item" *ngIf="hoard.encounterLevel">
-          Encounter Level: {{ hoard.encounterLevel }}</li>
         <li class="list-group-item">
           Total Hoard Value: {{ hoard.totalValue }}gp
         </li>

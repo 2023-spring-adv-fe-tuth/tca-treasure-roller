@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { TreasureSvcService } from '../treasure-svc.service';
 
@@ -15,6 +15,10 @@ export class HoardScreenComponent {
 
   hoardToShow = this.svc.passHoard;
   showMe = this.svc.passHoard.items;
+
+  ngOnInit(): void {
+
+  }
   
   updateHoard = () => {
     this.loc.historyGo(-1);
