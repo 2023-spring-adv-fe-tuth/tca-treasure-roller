@@ -15,10 +15,12 @@ export class ResultScreenComponent implements OnInit {
     private svc: TreasureSvcService
   ) {};
 
+  openChest: Loot[] = [];
+  encounterLoot: any = [];
   addMe = this.svc.otherHoard;
   showMe = this.svc.itsTwo;
   reRoll = this.svc.reroll;
-  openChest: Loot[] = [];
+  
 
   saveTreasure = () => {
     this.svc.addGameResult({
@@ -35,9 +37,10 @@ export class ResultScreenComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.svc.hoardSetup);
-    console.log(getItemNames(this.svc.reroll));
     if (this.svc.hoardSetup.name.length > 0) {
-      console.log(gatherLoot(this.svc.charts, this.openChest, this.svc.hoardSetup.budget));
+      this.encounterLoot = gatherLoot(this.svc.charts, this.encounterLoot, this.svc.hoardSetup.budget);
+      console.log(this.encounterLoot[0]);
+      console.log(this.encounterLoot[1]);
     };
   }
 }

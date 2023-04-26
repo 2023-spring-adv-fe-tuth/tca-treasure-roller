@@ -91,5 +91,5 @@ export const gatherLoot = (charts: Loot[][], chest: Loot[], budget: number) => {
         }
     }
     while (remainder >= (budget * 0.05));
-    return [chest, remainder];
+    return [chest, remainder] as const;
 };
