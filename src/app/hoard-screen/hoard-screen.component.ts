@@ -25,6 +25,10 @@ export class HoardScreenComponent {
   }
   
   updateHoard = () => {
+    this.svc.passHoard.items = this.showMe.filter(x => ({
+      ...x,
+      checked: false
+    }));
     this.loc.historyGo(-1);
   }
   
