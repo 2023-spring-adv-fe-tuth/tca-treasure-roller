@@ -41,7 +41,9 @@ export class ParametersScreenComponent implements OnInit {
     this.svc.hoardSetup = {
       name: this.hoardName ? this.hoardName : "Encounter",
       encounterLevel: this.encounterLevel,
-      budget: this.budget ? this.budget : Number(this.encounterLevelSelect.find(x => x.label == this.encounterLevel)?.budget),
+      budget: this.budget ? this.budget : 
+        Number(this.encounterLevelSelect.find(x => 
+          x.label == this.encounterLevel)?.budget),
       timeStamp: new Date().toISOString()
     };
   };
