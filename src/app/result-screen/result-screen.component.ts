@@ -18,7 +18,7 @@ export class ResultScreenComponent implements OnInit {
   openChest: Loot[] = [];
   encounterLoot: any = [];
   addMe = this.svc.otherHoard;
-  showMe = this.svc.itsTwo;
+  showMe: Loot[] = [];
   reRoll = this.svc.reroll;
   
 
@@ -41,6 +41,7 @@ export class ResultScreenComponent implements OnInit {
       this.encounterLoot = gatherLoot(this.svc.charts, this.encounterLoot, this.svc.hoardSetup.budget);
       console.log(this.encounterLoot[0]);
       console.log(this.encounterLoot[1]);
+      this.showMe = this.encounterLoot[0];
     };
   }
 }
