@@ -13,6 +13,7 @@ export interface Hoard {
     items: Loot[];
     totalValue: number;
     totalSaleValue: number;
+    remainder?: number;
 };
 
 export interface HoardSetup {
