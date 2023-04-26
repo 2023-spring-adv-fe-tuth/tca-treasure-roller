@@ -10,7 +10,7 @@
             <th scope="col">Remove Item</th>
         </tr>
     </thead>
-    <tbody  *ngFor="let item of showMe">
+    <tbody  *ngFor="let item of showMe, index as i">
         <tr>
             <td><mark>{{item.itemName}}</mark></td>
             <td>{{item.itemValue ? item.itemValue : "Sale item" }}</td>
