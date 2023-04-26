@@ -1,3 +1,4 @@
+import { Loot } from './../treasure-types';
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { TreasureSvcService } from '../treasure-svc.service';
@@ -16,9 +17,10 @@ export class HoardScreenComponent {
   hoardToShow = this.svc.passHoard;
   showMe = this.svc.passHoard.items;
   checked = false;
+  sellMe: Loot[] = [];
 
   get total() {
-    return 
+    return 0
   }
   
   updateHoard = () => {
