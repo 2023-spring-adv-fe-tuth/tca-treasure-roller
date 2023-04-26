@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { TreasureSvcService } from '../treasure-svc.service';
-import { Loot, checkTheItems } from '../treasure-types';
+import { checkTheItems } from '../treasure-types';
 
 @Component({
   selector: 'app-hoard-screen',
@@ -15,12 +15,7 @@ export class HoardScreenComponent {
   ) {}
   
   hoardToShow = this.svc.passHoard;
-  showMe: Loot[] = [];
-
-
-  ngOnInit(): void {
-    this.showMe = checkTheItems(this.svc.passHoard.items);
-  }
+  showMe = checkTheItems(this.svc.passHoard.items);
 
   get total() {
     return this.showMe.filter(x => x.checked)
