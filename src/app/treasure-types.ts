@@ -81,9 +81,14 @@ export const collectLoot: Encounter = (pile, item) => {
 export const gatherLoot = (charts: Loot[][], budget: number) => {
     let remainder = budget;
     let chest: Loot[] = [];
+    let useValue = 0;
     do {
         let rolledItem = secondRoll(firstRoll(charts));
-        let useValue = rolledItem.itemValue ? rolledItem.itemValue : rolledItem.saleValue;
+        if (rolledItem.itemValue != undefined) {
+            useValue = rolledItem.itemValue;
+        } else {
+            useValue = rolledItem.saleValue;
+        }
         if (useValue <= (budget * 0.3)) {
             chest = collectLoot(chest, rolledItem);
             remainder = remainder - useValue;
