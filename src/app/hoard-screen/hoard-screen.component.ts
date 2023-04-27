@@ -42,10 +42,11 @@ export class HoardScreenComponent {
 
   showMe = this.display(this.svc.passHoard.items)
 
-  checkMe = this.showMe.filter(x => x.checked)
-
   get total() {
-    return 0
+    return this.showMe.filter(x => x.checked)
+      .reduce((acc, s) => 
+        acc + s.item.saleValue, 0
+      )
   }
   
   updateHoard = () => {
