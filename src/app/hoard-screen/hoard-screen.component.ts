@@ -15,8 +15,6 @@ export class HoardScreenComponent {
   ) {}
   
   hoardToShow = this.svc.passHoard;
-  // showMe = this.svc.passHoard.items;
-  checked = false;
   sellMe: Loot[] = [];
 
   toSell = (items: Loot[]) => {
