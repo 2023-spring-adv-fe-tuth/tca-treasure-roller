@@ -40,23 +40,12 @@ export class HoardScreenComponent {
     return sellThese;
   }
 
-  toSell = (selling: Sell[]) => {
-    let i = 0;
-    let itemsToSell: Loot[] = [];
-    do {
-      itemsToSell = [ ...itemsToSell, selling[i].item];
-      i++;
-    }
-    while (i < selling.length);
-    return itemsToSell;
-  }
-
   showMe = this.display(this.svc.passHoard.items)
 
   checkMe = this.showMe.filter(x => x.checked)
 
   get total() {
-    return this.toSell(this.checkMe).reduce((acc, s) => acc + s.saleValue, 0)
+    return 0
   }
   
   updateHoard = () => {
