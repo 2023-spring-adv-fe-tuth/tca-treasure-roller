@@ -15,11 +15,10 @@ export class ResultScreenComponent {
     private svc: TreasureSvcService
   ) {};
 
-  openChest: Loot[] = [];
-  encounterLoot = gatherLoot(this.svc.charts, this.openChest, this.svc.hoardSetup.budget);
+  encounterLoot = gatherLoot(this.svc.charts, this.svc.hoardSetup.budget);
   addMe = this.svc.otherHoard;
   showMe: Loot[] = this.encounterLoot[0];
-  reRoll = gatherLoot(this.svc.charts, this.openChest, this.svc.hoardSetup.budget);
+  reRoll = gatherLoot(this.svc.charts, this.svc.hoardSetup.budget);
   
   rerollTreasure = () => {
     this.showMe = this.reRoll[0];
