@@ -31,6 +31,13 @@
         </tr>
 </table>
 <h5 *ngIf="total > 0">Sell these items for {{ total }}gp</h5>
-<button class="btn btn-info"
+<button class="btn btn-info mx-1"
     (click)="updateHoard()"
-><span class="h5">Save changes and return to Home</span></button>
+>
+    <span class="h5">Save changes and return to Home</span>
+</button>
+<button class="btn btn-warning mx-1"
+    (click)="rejectChanges()"
+>
+    <span class="h6">Discard changes</span> 
+</button>

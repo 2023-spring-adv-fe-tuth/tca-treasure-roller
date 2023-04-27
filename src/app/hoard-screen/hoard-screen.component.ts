@@ -73,5 +73,9 @@ export class HoardScreenComponent {
     console.log("and then", this.svc.passHoard);
     this.loc.historyGo(-1);
   }
+
+  rejectChanges= () => {
+    this.loc.historyGo(-1);
+  }
   
 }
