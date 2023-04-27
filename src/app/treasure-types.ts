@@ -30,6 +30,11 @@ export interface EncounterBudget {
     fastBudget?: number;
 }
 
+export interface Sell {
+    item: Loot;
+    checked: boolean;
+}
+
 export type GetLoot = (rolls: Loot[]) => string[];
 
 export type Encounter = (treasures: Loot[], next: Loot) => Loot[];

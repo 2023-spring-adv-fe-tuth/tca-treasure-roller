@@ -1,4 +1,4 @@
-import { Loot } from './../treasure-types';
+import { Loot, Sell } from './../treasure-types';
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { TreasureSvcService } from '../treasure-svc.service';
@@ -18,6 +18,29 @@ export class HoardScreenComponent {
   showMe = this.svc.passHoard.items;
   checked = false;
   sellMe: Loot[] = [];
+
+  toSell = (items: Loot[]) => {
+    let i = 0;
+    let sellThese: Sell[] = [];
+    let sellMe: Sell = {
+        item: {
+            itemName: "",
+            saleValue: 0,
+            notes: ""
+        },
+        checked: false
+    };
+    do {
+        sellMe = {
+            item: items[i],
+            checked: false
+        }
+        sellThese = [ ...sellThese, sellMe]
+        i++
+    }
+    while (i < items.length);
+    return sellThese;
+}
 
   get total() {
     return 0
