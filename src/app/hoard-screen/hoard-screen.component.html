@@ -10,11 +10,11 @@
             <th scope="col">Remove Item</th>
         </tr>
     </thead>
-    <tbody  *ngFor="let item of showMe, index as i">
+    <tbody  *ngFor="let show of showMe">
         <tr>
-            <td><mark>{{item.itemName}}</mark></td>
-            <td>{{item.itemValue ? item.itemValue : "Sale item" }}</td>
-            <td>{{item.saleValue}}</td>
+            <td><mark>{{show.item.itemName}}</mark></td>
+            <td>{{show.item.itemValue ? show.item.itemValue : "Sale item" }}</td>
+            <td>{{show.item.saleValue}}</td>
             <td class="form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" 
@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <td colspan="4">
-                {{item.notes}}
+                {{show.item.notes}}
             </td>
         </tr>
 </table>

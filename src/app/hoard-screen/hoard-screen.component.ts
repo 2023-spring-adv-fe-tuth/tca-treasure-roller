@@ -15,7 +15,7 @@ export class HoardScreenComponent {
   ) {}
   
   hoardToShow = this.svc.passHoard;
-  showMe = this.svc.passHoard.items;
+  // showMe = this.svc.passHoard.items;
   checked = false;
   sellMe: Loot[] = [];
 
@@ -40,7 +40,9 @@ export class HoardScreenComponent {
     }
     while (i < items.length);
     return sellThese;
-}
+  }
+
+  showMe = this.toSell(this.svc.passHoard.items)
 
   get total() {
     return 0
