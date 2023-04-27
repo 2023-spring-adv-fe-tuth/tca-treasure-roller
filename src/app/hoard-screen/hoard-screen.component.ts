@@ -1,4 +1,4 @@
-import { Loot, Sell } from './../treasure-types';
+import { Loot, Sell, Hoard, fullHoardValue, sellWholeHoard } from './../treasure-types';
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { TreasureSvcService } from '../treasure-svc.service';
@@ -42,6 +42,21 @@ export class HoardScreenComponent {
 
   showMe = this.display(this.svc.passHoard.items)
 
+  spareItems = (spares: Sell[]) => {
+    let holds: Loot[] = [];
+    let parsing = spares.filter(x => !x.checked);
+    let i = 0;
+    do {
+      holds = [
+        ...holds,
+        parsing[i].item
+      ]
+      i++;
+    }
+    while (i < parsing.length);
+    return holds;
+  }
+
   get total() {
     return this.showMe.filter(x => x.checked)
       .reduce((acc, s) => 
@@ -50,7 +65,12 @@ export class HoardScreenComponent {
   }
   
   updateHoard = () => {
-    
+    this.hoardToShow.items = this.spareItems(this.showMe);
+    this.hoardToShow.totalValue = fullHoardValue(this.spareItems(this.showMe));
+    this.hoardToShow.totalSaleValue = sellWholeHoard(this.spareItems(this.showMe));
+    console.log(this.hoardToShow);
+    this.svc.passHoard = this.hoardToShow;
+    console.log("and then", this.svc.passHoard);
     this.loc.historyGo(-1);
   }
   
