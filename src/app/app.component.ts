@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import * as localforage from 'localforage';
 
@@ -7,9 +7,18 @@ import * as localforage from 'localforage';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
+  title = 'tca-treasure-roller-2';
   constructor(private modalService: NgbModal){}
+
+  async ngOnInit() {
+    try {
+      this.emailAddress = await localforage.getItem("emailAddress") ?? "";
+    }
+    catch (err) {
+      console.log(err);
+    };
+  }
 
   public open({ modal }: { modal: any; }): void {
     this.modalService.open(modal);
@@ -28,5 +37,5 @@ export class AppComponent {
     };
   };
 
-  title = 'tca-treasure-roller-2';
+  
 }
