@@ -6,11 +6,15 @@ import {
 } from './treasure-types';
 import { Injectable } from '@angular/core';
 import { 
-GameResult,
-leaderboard,
-addGameResult,
-getPlayerNames
+  GameResult,
+  leaderboard,
+  addGameResult,
+  getPlayerNames
 } from './repl-type-definitions';
+import { 
+  saveGameToCloud, 
+  loadGamesFromCloud 
+} from './tca-cloud-api';
 
 @Injectable({
 providedIn: 'root'
