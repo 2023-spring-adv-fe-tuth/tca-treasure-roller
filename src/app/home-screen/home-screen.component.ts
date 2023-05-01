@@ -3,6 +3,7 @@ import { DisplayPlayer } from './../repl-type-definitions';
 import { TreasureSvcService } from './../treasure-svc.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as localforage from 'localforage';
 @Component({
   selector: 'app-home-screen',
   templateUrl: './home-screen.component.html',
@@ -25,8 +26,27 @@ export class HomeScreenComponent implements OnInit {
     this.gameSvc.passHoard = hoard;
   }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    try {
+      this.emailAddress = await localforage.getItem("emailAddress") ?? "";
+    }
+    catch (err) {
+      console.log(err);
+    };
     this.leaderData = this.gameSvc.leaderboard();
     this.treasureHistory = this.gameSvc.testH;
   }
+
+  emailAddress = "";
+
+  saveEmail = async() => {
+    try {
+      await localforage.setItem( // setItem takes key-value pair
+        "emailAddress" // key
+        , this.emailAddress // value
+      )
+    } catch (err) {
+      console.log(err);
+    };
+  };
 }
