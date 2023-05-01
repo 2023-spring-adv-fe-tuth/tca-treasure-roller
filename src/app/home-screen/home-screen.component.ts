@@ -29,12 +29,13 @@ export class HomeScreenComponent implements OnInit {
   async ngOnInit() {
     try {
       this.emailAddress = await localforage.getItem("emailAddress") ?? "";
+      this.leaderData = this.gameSvc.leaderboard();
+      this.treasureHistory = this.gameSvc.testH;
     }
     catch (err) {
       console.log(err);
     };
-    this.leaderData = this.gameSvc.leaderboard();
-    this.treasureHistory = this.gameSvc.testH;
+    
   }
 
   emailAddress = "";
