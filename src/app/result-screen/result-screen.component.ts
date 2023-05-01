@@ -35,10 +35,6 @@ export class ResultScreenComponent {
   };
 
   saveTreasure = () => {
-    this.svc.addGameResult({
-      winner: "Foxswallow",
-      players: ["Foxswallow", "Minion One", "Minion Two"]
-    });
     this.svc.forgeHistory(this.addHoard);
     this.location.historyGo(-2);
   };
