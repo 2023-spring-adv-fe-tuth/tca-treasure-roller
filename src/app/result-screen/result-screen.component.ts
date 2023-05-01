@@ -16,7 +16,6 @@ export class ResultScreenComponent {
   ) {};
 
   encounterLoot = gatherLoot(this.svc.charts, this.svc.hoardSetup.budget);
-  addMe = this.svc.otherHoard;
   showMe: Loot[] = this.encounterLoot[0];
   reRoll = gatherLoot(this.svc.charts, this.svc.hoardSetup.budget);
   
