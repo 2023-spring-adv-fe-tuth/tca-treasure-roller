@@ -1,6 +1,6 @@
 <div class="form-group row mt-2">
   <label class="col-md-3 col-form-label h3">
-      Enter your email address:                
+      Enter your email address to save your data locally:                
   </label>
   <div class="col-md-6">
       <input type="text"
@@ -13,15 +13,15 @@
 <button class="btn btn-info"
   (click)="saveEmail()"
 >Submit Email</button>
-<h2>Click the button to start building treasure.</h2>
+<h2
+  *ngIf="leaderData.length == 0"
+>You currently have no hoards. Click the button to start your collection.</h2>
 <button
   class="btn btn-outline-success"
   routerLink="/parameters-screen">
   Roll New Treasure
 </button>
-<h4
-  *ngIf="leaderData.length == 0"
->You currently have no hoards. Click the button to start your collection.</h4>
+
 
 <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0"
   *ngIf="leaderData.length > 0"
