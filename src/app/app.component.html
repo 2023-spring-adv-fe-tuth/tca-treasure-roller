@@ -1,5 +1,20 @@
 <div class="m-3">
   <h1>Treasure Roller!!</h1>
+  <div class="form-group row mt-2">
+    <label class="col-md-3 col-form-label h3">
+        Enter your email address:                
+    </label>
+    <div class="col-md-6">
+        <input type="text"
+            class="form-control"
+            [(ngModel)]="emailAddress"
+            placeholder="you@here.com"
+        >
+    </div>
+  </div>
+  <button class="btn btn-info"
+    (click)="saveEmail()"
+  >Submit Email</button>
   <router-outlet></router-outlet>
   
 </div>
