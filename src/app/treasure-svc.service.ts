@@ -3167,6 +3167,50 @@ const exoticWeapons: Loot[] = [
   ,	notes: "1.5lb, 1d6/x3, B, 80ft, ranged, strength, exotic, halfling, bullets, move action"
   }
 ]
+const artItems: Loot[] = [
+  {
+      itemName: "Oil painting on dragonhide",
+      saleValue: 4300,
+      notes: "You have to be bold or stupid to paint on dragonhide. Such a wholesome picture of a werewolf eating a family. Precious metal threads, mother-of-pearl, and a few semiprecious stones accentuate several details; ironic how the werewolf's body is highlighted in silver threads, but the moonstone eyes are spot-on."
+  },
+  {
+      itemName: "Gold idol",
+      saleValue: 1500,
+      notes: "A sculpture of some ancient, probably forgotten god; it's 30lbs of solid gold though"
+  },
+  {
+    itemName: "Copper Necklace",
+    saleValue: 2,
+    notes: "Beautifully wrought medallion on braided wire, worth more as art than metal"
+  },
+  {
+    itemName: "Silver Goblet",
+    saleValue: 150,
+    notes: "Solid silver inlaid with semiprecious stones"
+}
+]
+const gems: Loot[] = [
+  {
+    itemName: "Uncut Sapphire",
+    saleValue: 3400,
+    notes: "A beautiful blue gem weighing about 1oz"
+},
+{
+  itemName: "Jacinth",
+  saleValue: 500,
+  notes: "a pretty rock"
+},
+{
+  itemName: "Onyx",
+  saleValue: 50,
+  notes: "Useful for making undead"
+},
+{
+  itemName: "Jade",
+  saleValue: 50,
+  notes: "A green rock"
+}
+]
 
 const lootItems: Loot[][] = [
   wondrousItems,
@@ -3181,7 +3225,9 @@ const lootItems: Loot[][] = [
   simpleWeapons,
   martialWeapons,
   exoticWeapons,
-  cursedItems
+  cursedItems,
+  artItems,
+  gems
 ]
 
 const encounterLevels: EncounterBudget[] = [
