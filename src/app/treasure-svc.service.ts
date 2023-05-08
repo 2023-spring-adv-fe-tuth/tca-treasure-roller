@@ -11,10 +11,6 @@ import {
   addGameResult,
   getPlayerNames
 } from './repl-type-definitions';
-import { 
-  saveGameToCloud, 
-  loadGamesFromCloud 
-} from './tca-cloud-api';
 
 @Injectable({
 providedIn: 'root'

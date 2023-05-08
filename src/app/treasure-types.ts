@@ -87,6 +87,9 @@ export const gatherLoot = (charts: Loot[][], budget: number) => {
             ? rolledItem.itemValue 
             : rolledItem.saleValue;
         if (useValue <= (budget * 0.3)) {
+            if ((remainder - useValue) < (budget * 0.02)) {
+                return [chest, remainder] as const;
+            }
             chest = collectLoot(chest, rolledItem);
             remainder = remainder - useValue;
         } else {
