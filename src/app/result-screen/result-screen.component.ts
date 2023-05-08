@@ -17,6 +17,7 @@ export class ResultScreenComponent {
 
   encounterLoot = gatherLoot(this.svc.charts, this.svc.hoardSetup.budget);
   showMe: Loot[] = this.encounterLoot[0];
+  coins = this.encounterLoot[1];
   reRoll = gatherLoot(this.svc.charts, this.svc.hoardSetup.budget);
   
   rerollTreasure = () => {
