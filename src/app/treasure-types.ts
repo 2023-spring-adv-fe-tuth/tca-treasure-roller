@@ -5,6 +5,16 @@ export interface Loot {
     notes: string;
 };
 
+export interface Weapon extends Loot {
+    damageDice: string;
+    damageType: string;
+    criticalThreatRange: number;
+    criticalMultiplier: number;
+}
+export interface MagicWeapon extends Weapon {
+    enhancementBonus: number;
+}
+
 export interface Hoard {
     name: string;
     timeStamp: string;
