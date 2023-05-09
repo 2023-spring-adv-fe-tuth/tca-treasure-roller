@@ -3169,47 +3169,403 @@ const exoticWeapons: Loot[] = [
 ]
 const artItems: Loot[] = [
   {
-      itemName: "Oil painting on dragonhide",
-      saleValue: 4300,
-      notes: "You have to be bold or stupid to paint on dragonhide. Such a wholesome picture of a werewolf eating a family. Precious metal threads, mother-of-pearl, and a few semiprecious stones accentuate several details; ironic how the werewolf's body is highlighted in silver threads, but the moonstone eyes are spot-on."
-  },
-  {
-      itemName: "Gold idol",
-      saleValue: 1500,
-      notes: "A sculpture of some ancient, probably forgotten god; it's 30lbs of solid gold though"
-  },
-  {
-    itemName: "Copper Necklace",
-    saleValue: 2,
-    notes: "Beautifully wrought medallion on braided wire, worth more as art than metal"
-  },
-  {
-    itemName: "Silver Goblet",
-    saleValue: 150,
-    notes: "Solid silver inlaid with semiprecious stones"
-}
+    itemName: "Oil painting on dragonhide"
+  ,	saleValue: 4300
+  ,	notes: "You have to be bold or stupid to paint on dragonhide. Such a wholesome picture of a werewolf eating a family. Precious metal threads, mother-of-pearl, and a few semiprecious stones accentuate several details; ironic how the werewolf's body is highlighted in silver threads, but the moonstone eyes are spot-on."
+  }
+  , {
+    itemName: "Gold idol"
+  ,	saleValue: 1500
+  ,	notes: "A sculpture of some ancient, probably forgotten god; it's 30lbs of solid gold though"
+  }
+  , {
+    itemName: "Copper Necklace"
+  ,	saleValue: 2
+  ,	notes: "Beautifully wrought medallion on braided wire, worth more as art than metal"
+  }
+  , {
+    itemName: "Silver Goblet"
+  ,	saleValue: 150
+  ,	notes: "Solid silver inlaid with semiprecious stones"
+  }
+  , {
+    itemName: "Bronze statuette"
+  ,	saleValue: 15
+  ,	notes: "Typically a person or animal in a simple stance"
+  }
+  , {
+    itemName: "Copper wind chimes"
+  ,	saleValue: 20
+  ,	notes: "Different size tube bells, some with holes for a whistling effect"
+  }
+  , {
+    itemName: "Copper and glass vase"
+  ,	saleValue: 25
+  ,	notes: "Copper wire has been wrapped around a glass vase of unevenly stacked squares"
+  }
+  , {
+    itemName: "Ivory dice"
+  ,	saleValue: 30
+  ,	notes: "Five dice, each of a different shape, probably used for some esoteric game of chance"
+  }
+  , {
+    itemName: "Quartz egg in a copper wire nest"
+  ,	saleValue: 50
+  ,	notes: "It's pretty, but it's also slightly suspicious, like a petrified bird might come looking for it"
+  }
+  , {
+    itemName: "Tiny gold bells on a braided silk bracelet"
+  ,	saleValue: 60
+  ,	notes: "The silk is several different color strands, with three bells at even intervals along the band and a simple copper hook clasp"
+  }
+  , {
+    itemName: "Silver statuette"
+  ,	saleValue: 65
+  ,	notes: "A creature in a noble pose"
+  }
+  , {
+    itemName: "Electrum and crystal lantern"
+  ,	saleValue: 80
+  ,	notes: "A decoration only, the frame is beautifully detailed metal and the four panes are a lightly frosted crystal"
+  }
+  , {
+    itemName: "Silver and brass blazier"
+  ,	saleValue: 100
+  ,	notes: "A brass bowl with a strange rune stamped in the center, resting in a three-handled silver frame etched with small letters."
+  }
+  , {
+    itemName: "Ivory bust with gold"
+  ,	saleValue: 155
+  ,	notes: "This bust fits in a human hand, decorated with strips of gold wire for a circlet, necklaces and earrings"
+  }
+  , {
+    itemName: "Gold and jade candelabra"
+  ,	saleValue: 200
+  ,	notes: "A curving gold shaft with two asymmetrical branches, with jade cups for the candles to sit in"
+  }
+  , {
+    itemName: "Platinum holy symbol"
+  ,	saleValue: 500
+  ,	notes: "It's probably safer not to show this off outside a jeweler's shop"
+  }
+  , {
+    itemName: "Marble and gold cherub statue"
+  ,	saleValue: 600
+  ,	notes: "At 36 inches, it's large and heavy, but excellent work, capturing the little guy laughing with delight at the love he imbued, carrying a solid gold bow and tiny gold arrows, with gold rings in his eyes for irises"
+  }
+  , {
+    itemName: "Platinum decantur etched with ancient writing"
+  ,	saleValue: 800
+  ,	notes: "It's a poem about love, the lines artfully off-center such that the asymmetry would be dispelled if you could fold it in half"
+  }
+  , {
+    itemName: "Crystal and gold carafe with semmiprecious stones"
+  ,	saleValue: 900
+  ,	notes: "The carafe is wrapped in a gold lattice and set with alternating colors of semiprecious stones in a pattern like a pair of blue eyes on either side"
+  }
+  , {
+    itemName: "Bronze and mithral hand statue"
+  ,	saleValue: 1200
+  ,	notes: "This grasping bronze hand in a mithral glove is heavy enough to be stable if you set a sword hilt in it"
+  }
+  , {
+    itemName: "Masterpiece painting"
+  ,	saleValue: 1500
+  ,	notes: "Depiction of fire elementals dancing around a wailing wizard in the foreground while a nobleman looks on with amusement from the background"
+  }
+  , {
+    itemName: "Amethyst and mithral music box"
+  ,	saleValue: 2500
+  ,	notes: "The box and lid are carved from a single block of amethyst, with mithral hinges, a mithral mirror inlaid in the lid, a tiny amethyst dancer on a mithral stand, and a twinkly tune plucked on tiny mithral bars by an amethyst camshaft"
+  }
+  , {
+    itemName: "Mithral and adamantine chess set on a darkwood board"
+  ,	saleValue: 4000
+  ,	notes: "Mithral vs adamantine - though the king and queen of each side have bits of the opposition's material in them. The board is a darkwood tray with ivory and ebony tiles for the squares."
+  }
+  , {
+    itemName: "Jeweled ceremonial platinum sphere"
+  ,	saleValue: 6000
+  ,	notes: "The sphere is wrapped in a pattern of mithral wire and diamonds that could be a family crest"
+  }
+  , {
+    itemName: "Adamantine scepter with a glowing diamond"
+  ,	saleValue: 7500
+  ,	notes: "A narrow scepter capped with a glowing star-shaped diamond held in an adamantine raven claw"
+  }
+  , {
+    itemName: "Permanent ice statuette"
+  ,	saleValue: 10000
+  ,	notes: "This is a white dragon in a swooping attack pose carved of white ice with details shadowed in pearl dust"
+  }
+  , {
+    itemName: "Spider silk tapestry"
+  ,	saleValue: 12000
+  ,	notes: "This woven work is ten square feet of impossibly fine silk thread. It depicts three hunters and five dogs chasing a strange small beast in a lush field. An ominous black obelisk surrounded by roses stands in the background."
+  }
+  
 ]
 const gems: Loot[] = [
-  {
-    itemName: "Uncut Sapphire",
-    saleValue: 3400,
-    notes: "A beautiful blue gem weighing about 1oz"
-},
-{
-  itemName: "Jacinth",
-  saleValue: 500,
-  notes: "a pretty rock"
-},
-{
-  itemName: "Onyx",
-  saleValue: 50,
-  notes: "Useful for making undead"
-},
-{
-  itemName: "Jade",
-  saleValue: 50,
-  notes: "A green rock"
-}
+	{
+		itemName: "Uncut agate"
+	,	saleValue: 3
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut agate"
+	,	saleValue: 6
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut alabaster"
+	,	saleValue: 4
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut alabaster"
+	,	saleValue: 8
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut hematite"
+	,	saleValue: 5
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut hematite"
+	,	saleValue: 10
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut pyrite"
+	,	saleValue: 6
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut pyrite"
+	,	saleValue: 12
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut rhodochrosite"
+	,	saleValue: 7
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut rhodochrosite"
+	,	saleValue: 14
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut turquoise"
+	,	saleValue: 8
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut turquoise"
+	,	saleValue: 16
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut bloodstone"
+	,	saleValue: 15
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut bloodstone"
+	,	saleValue: 30
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut chrysoprase"
+	,	saleValue: 20
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut chrysoprase"
+	,	saleValue: 40
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut ivory"
+	,	saleValue: 25
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut ivory"
+	,	saleValue: 50
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut onyx"
+	,	saleValue: 25
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut onyx"
+	,	saleValue: 50
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut sardonyx"
+	,	saleValue: 30
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut sardonyx"
+	,	saleValue: 60
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut zircon"
+	,	saleValue: 35
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut zircon"
+	,	saleValue: 70
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut amber"
+	,	saleValue: 40
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut amber"
+	,	saleValue: 80
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut amethyst"
+	,	saleValue: 45
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut amethyst"
+	,	saleValue: 90
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut chrysoberyl"
+	,	saleValue: 50
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut chrysoberyl"
+	,	saleValue: 100
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut jade"
+	,	saleValue: 60
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut jade"
+	,	saleValue: 120
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut saltwater pearl"
+	,	saleValue: 70
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut saltwater pearl"
+	,	saleValue: 140
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut aquamarine"
+	,	saleValue: 125
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut aquamarine"
+	,	saleValue: 250
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut black pearl"
+	,	saleValue: 150
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut black pearl"
+	,	saleValue: 300
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut topaz"
+	,	saleValue: 200
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut topaz"
+	,	saleValue: 400
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut opal"
+	,	saleValue: 250
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut opal"
+	,	saleValue: 500
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut emerald"
+	,	saleValue: 500
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut emerald"
+	,	saleValue: 1000
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut small ruby"
+	,	saleValue: 600
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut small ruby"
+	,	saleValue: 1200
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut sapphire"
+	,	saleValue: 700
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut sapphire"
+	,	saleValue: 1400
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut brilliant emerald"
+	,	saleValue: 1750
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut brilliant emerald"
+	,	saleValue: 3500
+	,	notes: "This gem is nicely cut and polished"
+	}
+	, {
+		itemName: "Uncut diamond"
+	,	saleValue: 3250
+	,	notes: "This gem is rough, but you can double its value with a little work"
+	}
+	, {
+		itemName: "Cut diamond"
+	,	saleValue: 6500
+	,	notes: "This gem is nicely cut and polished"
+	}
 ]
 
 const lootItems: Loot[][] = [
