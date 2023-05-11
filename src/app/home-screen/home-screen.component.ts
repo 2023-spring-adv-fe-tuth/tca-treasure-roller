@@ -1,5 +1,4 @@
 import { Hoard } from './../treasure-types';
-import { DisplayPlayer } from './../repl-type-definitions';
 import { TreasureSvcService } from './../treasure-svc.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -17,8 +16,6 @@ export class HomeScreenComponent implements OnInit {
     private router: Router
   ) {}
 
-  leaderData: DisplayPlayer[] = [];
-
   treasureHistory: Hoard[] = [];
 
   displayHoard = (hoard: Hoard) => {
@@ -29,7 +26,6 @@ export class HomeScreenComponent implements OnInit {
   async ngOnInit() {
     try {
       this.emailAddress = await localforage.getItem("emailAddress") ?? "";
-      this.leaderData = this.gameSvc.leaderboard();
       this.treasureHistory = this.gameSvc.testH;
     }
     catch (err) {

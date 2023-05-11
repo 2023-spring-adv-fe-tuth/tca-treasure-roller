@@ -14,23 +14,12 @@ export class ParametersScreenComponent implements OnInit {
     private svc: TreasureSvcService
   ) {};
 
-
-  extraPlayers: {
-    name: string;
-    checked: boolean;
-  }[] = [];
-
   hoardName = "";
   encounterLevel = "";
   encounterLevelSelect = this.svc.elTrack;
   budget = 0;
   ngOnInit(): void {
-    this.extraPlayers = this.svc.getPlayerNames().map(x => ({
-      name: x,
-      checked: false
-    }));
 
-    console.log(this.extraPlayers);
   };
 
   rollTreasure = () => {

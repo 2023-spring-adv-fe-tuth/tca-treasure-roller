@@ -5,12 +5,6 @@ import {
   EncounterBudget
 } from './treasure-types';
 import { Injectable } from '@angular/core';
-import { 
-  GameResult,
-  leaderboard,
-  addGameResult,
-  getPlayerNames
-} from './repl-type-definitions';
 
 @Injectable({
 providedIn: 'root'
@@ -19,7 +13,6 @@ export class TreasureSvcService {
 
 constructor() { }
 
-  grs: GameResult[] = [];
   testH: Hoard[] = [];
   elTrack: EncounterBudget[] = encounterLevels;
   charts = lootItems;
@@ -32,25 +25,9 @@ constructor() { }
     totalSaleValue: 0
   };
 
-  leaderboard = () => leaderboard(this.grs);
-
   forgeHistory = (adding: Hoard) => {
     this.testH = forgeHistory(this.testH, adding);
   }
-
-  addGameResult = (adding: GameResult) => {
-    this.grs = addGameResult(this.grs, adding);
-  };
-
-  getPlayerNames = () => getPlayerNames(this.grs);
-
-  setupInfo: {
-    start: string;
-    players: string[]
-  } = { 
-    start: "",
-    players: []
-  };
 
   hoardSetup: {
     name: string;

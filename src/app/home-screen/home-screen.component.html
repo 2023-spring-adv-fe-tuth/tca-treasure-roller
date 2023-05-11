@@ -14,31 +14,13 @@
   (click)="saveEmail()"
 >Submit Email</button>
 <h2
-  *ngIf="leaderData.length == 0"
+  *ngIf="treasureHistory.length == 0"
 >You currently have no hoards. Click the button to start your collection.</h2>
 <button
   class="btn btn-outline-success"
   routerLink="/parameters-screen">
   Roll New Treasure
 </button>
-
-
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0"
-  *ngIf="leaderData.length > 0"
->
-  <ngb-panel *ngFor="let player of leaderData">
-    <ng-template ngbPanelTitle>
-      {{ player.name }}
-    </ng-template>
-    <ng-template ngbPanelContent>
-      <ul>
-        <li>{{ player.wins }}</li>
-        <li>{{ player.losses }}</li>
-        <li>{{ player.avg }}</li>
-      </ul>
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
 
 <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" 
   *ngIf="treasureHistory.length > 0"
